@@ -25,6 +25,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get("/", (req, res) => {
+  res.send("Server ishlamoqda...");
+});
+
 // OTP yuborish endpointi
 app.post("/send-otp", async (req, res) => {
   const { email } = req.body;
